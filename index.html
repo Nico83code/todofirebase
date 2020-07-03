@@ -10,11 +10,13 @@
 
 <body>
   <div>
-    <label for="new-task">Add Item</label>
-    <input id="new-task" type="text" />
-    <button>Add</button>
+    <form class="addtask">
+      <label for="new-task">Add Item</label>
+      <input type="text" class="input-task" id="description" placeholder="add task">
+      <input type="submit" value="add task">
+    </form>
   </div>
-  <div class="container">
+  <div id="todo">
     <h3>Todo</h3>
     <ul id="taskslist">
     </ul>

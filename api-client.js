@@ -45,33 +45,9 @@ const removeData = async (hashId) => {
     let response = await fetch(apiUrl, { method: "DELETE" });
     const result = await response.json();
     // console.log(result);
-    return result;
+    // return result;
+    location.reload();
   } catch (error) {
     console.log(error);
   }
 };
-
-
-// const putData = async (id, Description, status) => {
-//   if (status) {
-//     try {
-//       const apiUrl = `${baseUrl}/tasks/${hashId}/done.json`;
-//       let response = await fetch(apiUrl, { method: "PUT" });
-//       const result = await response.json();
-//       console.log(result);
-//       return result;
-//     } catch (error) {
-//       console.log(error);
-//     }
-//   } else {
-//     try {
-//       const apiUrl = `${baseUrl}/tasks/${hashId}/done.json`;
-//       let response = await fetch(apiUrl, { method: "PUT" });
-//       const result = await response.json();
-//       console.log(result);
-//       return result;
-//     } catch (error) {
-//       console.log(error);
-//     }
-//   }
-// };
