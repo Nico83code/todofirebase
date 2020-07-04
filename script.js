@@ -1,13 +1,14 @@
-document.querySelector('.addtask').onsubmit = (event) => {
-    postData(event.target.description.value);
+//add task
+document.querySelector('.addtask').onsubmit = (task) => {
+    postData(task.target.description.value);
 }
 
-const todo = document.querySelector(".todo");
-
+// const todo = document.querySelector(".todo");
 
 const allTask = async () => {
     const data = await getData();
     return data.forEach((data) => {
+        const todo = document.querySelector(".todo");
         const addNewTaskRow = document.createElement("li");
         const checkBox = document.createElement("input");
         const label = document.createElement("label");
@@ -20,8 +21,17 @@ const allTask = async () => {
         addNewTaskRow.appendChild(label)
         addNewTaskRow.appendChild(deleteButton)
         label.appendChild(taskName)
+
+        //checkbox
         checkBox.type = "checkbox";
+
+        //strikethrough
+        label.setAttribute("class", "strikethrough")
+
+        //add task id
         addNewTaskRow.setAttribute("id", data.id)
+
+        // delete button
         deleteButton.setAttribute("src", "deleteicon.jpg")
         deleteButton.setAttribute("width", "50");
         deleteButton.setAttribute("height", "50");

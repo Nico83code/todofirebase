@@ -16,26 +16,7 @@ body {
   li * {
     float: left;
   }
-  li, h3 {
-    clear:both;
-    list-style:none;
-  }
-  input, button {
-    outline: none;
-  }
-  button {
-    background: none;
-    border: 0px;
-    color: #888;
-    font-size: 15px;
-    width: 60px;
-    margin: 10px 0 0;
-    font-family: Lato, sans-serif;
-    cursor: pointer;
-  }
-  button:hover {
-    color: #333;
-  }
+
   /* Heading */
   h3,
   label[for='new-task'] {
@@ -72,9 +53,7 @@ body {
     float: left;
     width: 318px;
   }
-  p > button:hover {
-    color: #0FC57C;
-  }
+  
   
   /* Task list */
   li {
@@ -96,12 +75,10 @@ body {
   li >  input[type="text"] {
     width: 226px;
   }
-  li > .delete:hover {
-    color: #CF2323;
-  }
+  
   
   /* Completed */
-  #completed-tasks label {
+  input[type=checkbox]:checked + label.strikethrough{
     text-decoration: line-through;
     color: #888;
   }

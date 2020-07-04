@@ -13,7 +13,7 @@ const getData = async () => {
       description: result[key].description,
       done: result[key].done,
     }));
-    console.log("After the tasks array", tasks);
+    // console.log("After the tasks array", tasks);
     return tasks;
   } catch (error) {
     console.log(error);
