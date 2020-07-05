@@ -17,7 +17,6 @@ const allTask = async () => {
         const editInput = document.createElement("input");
 
 
-
         taskList.appendChild(addNewTaskRow)
         addNewTaskRow.appendChild(checkBox)
         addNewTaskRow.appendChild(label)
@@ -68,10 +67,6 @@ const allTask = async () => {
         editButton.setAttribute("src", "editicon.png")
         editButton.setAttribute("width", "50");
         editButton.setAttribute("height", "50");
-
-        // editButton.addEventListener("click", (event) => {
-        //     return putData(data.description)
-        // })
 
         // delete button
         deleteButton.setAttribute("src", "deleteicon.jpg")

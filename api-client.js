@@ -58,7 +58,7 @@ const putData = async (hashId, task) => {
     let response = await fetch(apiUrl, {
       method: "PUT",
       body: JSON.stringify({ description: task })
-      // body: JSON.stringify({ description: task, done: false })
+
     });
     const result = await response.json();
     // console.log(result);
