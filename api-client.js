@@ -51,3 +51,19 @@ const removeData = async (hashId) => {
     console.log(error);
   }
 };
+
+const putData = async (hashId, task) => {
+  try {
+    const apiUrl = `${baseUrl}/tasks/${hashId}.json`;
+    let response = await fetch(apiUrl, {
+      method: "PUT",
+      body: JSON.stringify({ description: task })
+      // body: JSON.stringify({ description: task, done: false })
+    });
+    const result = await response.json();
+    // console.log(result);
+    // return result;
+  } catch (error) {
+    console.log(error);
+  }
+};
